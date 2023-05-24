@@ -7,7 +7,7 @@ import EntryMessage from "./components/EntryMessage";
 import ChatBody from "./components/ChatBody";
 
 function App() {
-	const [showMainMessage, setShowMainMessage] = useState(false);
+	const [showMainMessage, setShowMainMessage] = useState(true);
 
 	return (
 		<>
