@@ -18,6 +18,7 @@ import SearchIcon from "../assets/icons/send.png";
 const Container = styled.div`
 	position: relative;
 	z-index: 0;
+	padding-top: 4rem;
 `;
 
 const ChatContainer = styled.div`
@@ -27,7 +28,7 @@ const ChatContainer = styled.div`
 	z-index: 1;
 
 	@media (max-width: 600px) {
-		height: 80vh;
+		height: 70vh;
 	}
 `;
 

@@ -6,6 +6,11 @@ import BackIconPath from "../../assets/icons/arrow-left.png";
 
 // styles
 const Container = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
 	background-color: var(--mainColor);
 	padding: 0.5rem 0;
 `;
@@ -47,6 +52,7 @@ const BackIcon = styled.img`
 const AvatarBox = styled.div``;
 
 const AvatarIcon = styled.img`
+	display: block;
 	width: 3rem;
 	object-fit: contain;
 	cursor: pointer;
