@@ -22,7 +22,7 @@ export default function Footer() {
 		<Container>
 			<Wrapper>
 				<Text href='https://www.dreamlabai.com/' target='_blank' rel='noopener noreferrer'>
-					Power by Dream Lab AI
+					Powered by Dream Lab AI
 				</Text>
 			</Wrapper>
 		</Container>

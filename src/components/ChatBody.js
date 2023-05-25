@@ -91,7 +91,7 @@ const SearchImage = styled.img`
 `;
 
 export default function ChatBody({ setShowMainMessage }) {
-	const [openAvatarSelection, setOpenAvatarSelection] = useState(false);
+	const [openAvatarSelection, setOpenAvatarSelection] = useState(true);
 	const [avatarIconState, setAvatarIconState] = useState(Avatar1);
 
 	return (

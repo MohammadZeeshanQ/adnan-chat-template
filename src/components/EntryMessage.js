@@ -4,6 +4,8 @@ import styled from "styled-components";
 // assets
 import RightIcon from "../assets/icons/arrow-right.png";
 import Avatar from "../assets/avatars/avatar1.png";
+import Logo1 from "../assets/logos/logo1.png";
+import Logo2 from "../assets/logos/logo2.png";
 
 // styles
 const Container = styled.div`
@@ -35,7 +37,9 @@ const IconBox = styled.div`
 `;
 
 const Icon = styled.img`
+	display: block;
 	width: 8rem;
+	object-fit: content;
 
 	@media (min-width: 601px) and (max-width: 1024px) {
 		width: 6rem;
@@ -46,7 +50,7 @@ const Icon = styled.img`
 `;
 
 const TextBox = styled.div`
-	width: 70%;
+	width: 65%;
 	margin: auto;
 	text-align: center;
 	margin-top: 2rem;
@@ -60,24 +64,24 @@ const TextBox = styled.div`
 	}
 `;
 
-const Header = styled.h1`
-	color: #0875a4;
-	font-size: 2.5rem;
-	font-weight: 800;
-	letter-spacing: 0.5px;
-	margin-bottom: 1rem;
+// const Header = styled.h1`
+// 	color: #0875a4;
+// 	font-size: 2.5rem;
+// 	font-weight: 800;
+// 	letter-spacing: 0.5px;
+// 	margin-bottom: 1rem;
 
-	@media (min-width: 601px) and (max-width: 1024px) {
-		font-size: 1.8rem;
-	}
-	@media (max-width: 600px) {
-		font-size: 1.8rem;
-	}
-`;
+// 	@media (min-width: 601px) and (max-width: 1024px) {
+// 		font-size: 1.8rem;
+// 	}
+// 	@media (max-width: 600px) {
+// 		font-size: 1.8rem;
+// 	}
+// `;
 
 const Description = styled.p`
 	color: #171717;
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 	line-height: 1.5;
 	letter-spacing: 0.3px;
@@ -87,6 +91,32 @@ const Description = styled.p`
 	}
 	@media (max-width: 600px) {
 		font-size: 0.9rem;
+	}
+`;
+
+const LogoContainer = styled.div`
+	margin-top: 2rem;
+`;
+
+const LogoWrapper = styled.div`
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	/* change flex direction to : column (if you want to display up and down way) */
+	flex-direction: row;
+`;
+
+const LogoImage = styled.img`
+	display: block;
+	width: 6rem;
+	object-fit: content;
+
+	@media (min-width: 601px) and (max-width: 1024px) {
+		width: 5rem;
+	}
+	@media (max-width: 600px) {
+		width: 6rem;
 	}
 `;
 
@@ -138,11 +168,17 @@ export default function EntryMessage({ setShowMainMessage }) {
 					<Icon src={Avatar} loading='lazy' height='auto' width='auto' alt='Hi, From Chat Bot AI' />
 				</IconBox>
 				<TextBox>
-					<Header>Your AI Chatbot</Header>
+					{/* <Header>Your AI Chatbot</Header> */}
 					<Description>
 						Assalamu Alaikum and welcome to the 2023 ICNA Convention! Meet ICNAbot! Your personalized
 						convention companion. Ask ICNAbot questions about sessions, the bazaar, and speakers. Bismillah!
 					</Description>
+					<LogoContainer>
+						<LogoWrapper>
+							<LogoImage src={Logo1} loading='lazy' height='auto' width='auto' alt='AI Chatbot' />
+							<LogoImage src={Logo2} loading='lazy' height='auto' width='auto' alt='AI Chatbot' />
+						</LogoWrapper>
+					</LogoContainer>
 				</TextBox>
 				<ButtonBox>
 					<Button onClick={() => setShowMainMessage(false)}>
